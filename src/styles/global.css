@@ -25,9 +25,12 @@
     display: flex;
     justify-content: center;
     padding: 0.5rem 1rem;
-    background: rgba(255, 255, 255, 0.3); /* Blanco translúcido */
+    background: rgba(255, 255, 255, 1);
     backdrop-filter: blur(5px);
-    border-radius: 0 0 15px 15px;
+    border-radius: 15px;
+    margin: auto;
+    width: fit-content;
+    margin-top: 10px;
   }
   
   .navbar-links {
@@ -47,99 +50,166 @@
     color: #444cf7; /* Azul para detalles */
   }
   
-  /* HERO SECTION */
-  .hero-section {
-    text-align: center;
+  /* Hero Section */
+
+.hero-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 4rem 1rem;
+  }
+  
+  .hero-content {
+    max-width: 800px;
+    text-align: center;
   }
   
   .hero-title {
     font-size: 2.5rem;
     margin-bottom: 1rem;
-    color: #1a1a1a; /* Un negro un poco más oscuro */
+    color: #2b2b2b;
   }
   
   .hero-subtitle {
-    font-size: 1.2rem;
+    font-size: 1.25rem;
     margin-bottom: 2rem;
-    color: #3a3a3a;
+    color: #4a4a4a;
   }
   
-  .hero-form {
+  .hero-mockup-container {
+    margin: 2rem auto 0 auto;
     display: inline-flex;
-    flex-direction: row;
+    flex-direction: column;
+    align-items: center;
     gap: 0.5rem;
   }
   
-  .hero-input {
-    padding: 0.5rem 1rem;
-    border: 2px solid #444cf7;
-    border-radius: 5px;
-    font-family: inherit;
+  .hero-mockup {
+    width: 300px;  /* ajusta según el tamaño que quieras mostrar */
+    height: auto;
+    border-radius: 20px; /* esquinas redondeadas tipo iPhone */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
   }
   
-  .hero-button {
-    background-color: #444cf7;
-    color: #ffffff;
-    border: none;
-    border-radius: 5px;
-    padding: 0.5rem 1rem;
-    cursor: pointer;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
+  .hero-mockup-text {
+    font-style: italic;
+    color: #555;
+    margin-top: 0.5rem;
   }
-  
-  .hero-button:hover {
-    background-color: #2b2bd0;
-  }
-  
-  /* ADVANTAGES */
-  .advantages-section {
-    max-width: 800px;
-    margin: 0 auto;
+  /* --- Benefits Section --- */
+.benefits-section {
     padding: 3rem 1rem;
+    background-color: #ffffff; /* Ajusta según tu preferencia */
     text-align: center;
   }
   
-  .advantages-section h2 {
+  .benefits-title {
     font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #2b2b2b;
+  }
+  
+  .benefits-container {
+    display: flex;
+    flex-wrap: wrap;         /* Permite ajuste en pantallas pequeñas */
+    justify-content: center; /* Centra los cards */
+    gap: 2rem;               /* Espacio entre cards */
+  }
+  
+  .benefit-card {
+    background-color: #f9f9ff;
+    border-radius: 10px;
+    width: 280px;            /* Ajusta el ancho deseado */
+    padding: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.2s ease;
+  }
+  
+  .benefit-card:hover {
+    transform: translateY(-2px); /* Pequeña elevación al hover */
+  }
+  
+  .benefit-icon {
+    width: 60px;             /* Tamaño del icono */
+    height: 60px;
     margin-bottom: 1rem;
   }
   
-  .advantages-list {
-    list-style: none;
-    padding: 0;
-    text-align: left;
-  }
-  
-  .advantages-list li {
+  .benefit-card-title {
+    font-size: 1.25rem;
     margin-bottom: 0.75rem;
+    color: #2b2b2b;
+  }
+  
+  .benefit-card-description {
     font-size: 1rem;
+    color: #4a4a4a;
   }
-  
-  /* APP IMAGES */
-  .app-images-section {
-    text-align: center;
-    padding: 3rem 1rem;
-  }
-  
-  .app-images-section h2 {
-    font-size: 2rem;
-    margin-bottom: 2rem;
-  }
-  
-  .images-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2rem;
-    margin-bottom: 2rem;
-  }
-  
-  .images-container img {
-    max-width: 200px;
-    border-radius: 10px;
-  }
+  /* --- CTA Section --- */
+.cta-section {
+  padding: 3rem 1rem;
+  background-color: #191919; /* Ajusta el color de fondo a tu gusto */
+  text-align: center;
+}
+
+.cta-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.cta-title {
+  font-size: 1.75rem;
+  margin-bottom: 1.5rem;
+  color: #eeeeee;
+}
+
+.cta-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.cta-label {
+  font-size: 1rem;
+  color: #eeeeee;
+}
+
+.cta-input {
+  padding: 0.75rem 1rem;
+  border: 2px solid #444cf7;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 350px;
+  font-family: inherit;
+}
+
+.cta-button {
+  background-color: #444cf7;
+  color: #eeeeee;
+  border: none;
+  border-radius: 5px;
+  padding: 0.75rem 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #2b2bd0; /* Un tono más oscuro de tu color principal */
+}
+
+.cta-text {
+  font-size: 0.95rem;
+  color: #eeeeee;
+  margin-top: 1rem;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
   
   /* Formulario repetido en la sección de imágenes */
   .images-form {

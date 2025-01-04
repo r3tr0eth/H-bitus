@@ -1,18 +1,24 @@
 ---
 import BaseLayout from "../layouts/Layout.astro";
 import Navbar from "../components/Navbar";
+import Hero from "../components/Hero";
+import Benefits from "../components/Benefits";
+import CTA1 from "../components/CTA1";
 
 const links = [
-  { label: "Inicio", href: "#hero" },
-  { label: "Ventajas", href: "#advantages" },
-  { label: "Galería", href: "#app-images" },
-  { label: "Sígueme", href: "#social" },
-  { label: "Contacto", href: "#footer" },
+	{ label: "Inicio", href: "#hero" },
+	{ label: "Ventajas", href: "#advantages" },
+	{ label: "Galería", href: "#app-images" },
+	{ label: "Sígueme", href: "#social" },
+	{ label: "Contacto", href: "#footer" },
 ];
 ---
+
 <BaseLayout>
-  <Navbar links={links} />
-    <section id="hero">
-    <h1>¡Bienvenido a Hábitus!</h1>
-  </section>
+	<Navbar links={links} />
+	<section id="hero">
+		<Hero />
+		<Benefits />
+		<CTA1 />
+	</section>
 </BaseLayout>
